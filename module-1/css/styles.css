@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black background for the space theme */
+    color: #ffffff; /* White text for contrast */
+    background-image: "https://cdn.spacetelescope.org/archives/images/wallpaper1/heic0611b.jpg"
+  }
+  
+  .header {
+    background-color: #004080; /* NASA blue */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .image-collage img {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .id ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .id ul li {
+    margin-bottom: 10px;
+  }
+  
+  .id ul li a {
+    color: #00ff00; /* Green for hyperlinks */
+  }
+  
+  .id ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    padding: 20px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-item {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    border: 2px solid #00ff00; /* Green border for images */
+  }
+  
+  .image-item p {
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+    color: #00ff00; /* Green text for image captions */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080; /* NASA blue */
+  }
+  
+  
