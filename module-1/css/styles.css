@@ -1,98 +1,163 @@
+@import url('http://fonts.googleapis.com/css?family=Press+Start+2P');
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', Arial, sans-serif; /* Use a pixelated font */
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Black background for the space theme */
+    background-color: black; /* Black background for the space theme */
     color: #ffffff; /* White text for contrast */
-    background-image: "https://cdn.spacetelescope.org/archives/images/wallpaper1/heic0611b.jpg"
-  }
-  
-  .header {
+    background-image: url('https://cdn.spacetelescope.org/archives/images/wallpaper1/heic0611b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
     background-color: #004080; /* NASA blue */
     padding: 20px;
     text-align: center;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     font-size: 36px;
     margin: 0;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin: 0 10px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     text-decoration: underline;
-  }
-  
-  .content {
+}
+
+.content {
     padding: 20px;
-  }
-  
-  .image-collage img {
+}
+
+.image-collage img {
     width: 200px;
     margin: 10px;
-  }
-  
-  .id ul {
+}
+
+.id ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .id ul li {
-    margin-bottom: 10px;
-  }
-  
-  .id ul li a {
-    color: #00ff00; /* Green for hyperlinks */
-  }
-  
-  .id ul li a:hover {
-    text-decoration: underline;
-  }
+}
 
-  .content {
-    padding: 20px;
-  }
-  
-  .image-gallery {
+.id ul li {
+    margin-bottom: 10px;
+}
+
+.id ul li a {
+    color: #00ff00; /* Green for hyperlinks */
+}
+
+.id ul li a:hover {
+    text-decoration: underline;
+}
+
+.image-gallery {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .image-item {
+}
+
+.image-item {
     width: 200px;
     margin: 10px;
-  }
-  
-  .image-item img {
+}
+
+.image-item img {
     width: 100%;
     border: 2px solid #00ff00; /* Green border for images */
-  }
-  
-  .image-item p {
+    image-rendering: pixelated; /* Apply pixelated effect to images */
+}
+
+.image-item p {
     text-align: center;
     margin: 0;
     padding-top: 5px;
     color: #00ff00; /* Green text for image captions */
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     padding: 10px;
     background-color: #004080; /* NASA blue */
-  }
-  
-  
+}
+
+#wm-ipp #wm-ipp-inside {
+  margin: 0 6px;
+  border:5px solid #000;
+  border-top:none;
+  background-color:rgba(255,255,255,0.9);
+  -moz-box-shadow:1px 1px 4px #333;
+  -webkit-box-shadow:1px 1px 4px #333;
+  box-shadow:1px 1px 4px #333;
+  border-radius:0 0 8px 8px;
+}
+.container {
+    width: 1000px;
+    height: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+h1, h2, h3, p, a {
+  color: yellow;
+}
+span.line{
+  color: red;
+}
+.cursor{
+    cursor: url(https://i.imgur.com/RUE567I.gif), auto;
+}
+
+/* @group Blink */
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
