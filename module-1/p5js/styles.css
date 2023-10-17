@@ -1,11 +1,37 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
+  background-color: black;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
 }
 
-canvas {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
+#crawl-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#crawl {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: yellow;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 60px;
+  transform: perspective(500px) rotateX(30deg);
+}
+
+#crawl p {
+  margin: 0;
+}
+
+#sketch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
