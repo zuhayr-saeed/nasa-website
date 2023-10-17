@@ -1,28 +1,63 @@
-var f = 0;
+let stars = [];
+
 function setup() {
-  createCanvas(windowWidth, 200);
+  createCanvas(windowWidth, windowHeight);
+
+  let volumeControl = document.getElementById('volume');
+  let bgMusic = document.getElementById('bgMusic');
+  
+  // Set the initial volume to half (0.5)
+  bgMusic.volume = 0.5;
+
+  volumeControl.addEventListener('input', () => {
+    bgMusic.volume = volumeControl.value;
+  });
+  
+  for (let i = 0; i < 100; i++) {
+    stars.push(new Star());
+  }
 }
 
 function draw() {
-  background(0); // Black background
+  background(0);
+  translate(width / 2, height / 2);
+  
+  for (let star of stars) {
+    star.update();
+    star.display();
+  }
+}
 
-  // Draw stars
-  for (let i = 0; i < 100; i++) {
-    let x = random(width);
-    let y = random(height);
+class Star {
+  constructor() {
+    this.x = random(-width, width);
+    this.y = random(-height, height);
+    this.z = random(width);
+    this.pz = this.z;
+  }
+
+  update() {
+    this.z = this.z - 10;
+    if (this.z < 1) {
+      this.z = width;
+      this.x = random(-width, width);
+      this.y = random(-height, height);
+      this.pz = this.z;
+    }
+  }
+
+  display() {
+    let sx = map(this.x / this.z, 0, 1, 0, width);
+    let sy = map(this.y / this.z, 0, 1, 0, height);
+    let r = map(this.z, 0, width, 16, 0);
+    fill(255);
+    noStroke();
+    ellipse(sx, sy, r, r);
+    
+    let px = map(this.x / this.pz, 0, 1, 0, width);
+    let py = map(this.y / this.pz, 0, 1, 0, height);
+    this.pz = this.z;
     stroke(255);
-    point(x, y);
+    line(px, py, sx, sy);
   }
-
-  draw=_=>{
-    f++?background(0):createCanvas(W=500,W)
-    noStroke()
-    for(x=-W;x<W;x+=5) {
-      for(n=0;n<30;n++){
-        d=(f+n+9e3)*5*noise(x)%600-50
-        100<x+d&x+d<400&100<d&d<400&&circle(x+d,d,n/6)
-    }
-    }
-  }
- 
 }
